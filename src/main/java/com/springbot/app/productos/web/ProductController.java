@@ -25,9 +25,9 @@ public class ProductController {
 
         var response = service.findAll();
 
-        return (Objects.nonNull(response)) ?
-                new ResponseEntity<>(response, HttpStatus.OK) :
-                new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return (Objects.nonNull(response))
+                ? new ResponseEntity<>(response, HttpStatus.OK)
+                : new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @GetMapping("/productos/mostrar/{id}")
